@@ -1,0 +1,10 @@
+name: ReccurentMessages
+main: me.EtienneDx.ReccurentMessages.ReccurentMessages
+version: ${project.version}
+authors: [EtienneDx]
+
+commands:
+  
+    
+permissions:
+  
