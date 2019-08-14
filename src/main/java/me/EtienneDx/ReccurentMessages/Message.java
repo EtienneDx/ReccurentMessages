@@ -5,9 +5,11 @@ import java.util.Map;
 
 import org.bukkit.configuration.serialization.ConfigurationSerializable;
 
+import net.md_5.bungee.api.ChatColor;
+
 public class Message implements ConfigurationSerializable
 {
-	public String message = "Hello, World!";
+	public String message = ChatColor.AQUA + "Hello, World!";
 	
 	public int intervalInMinutes = 5;
 	
@@ -21,7 +23,7 @@ public class Message implements ConfigurationSerializable
 	
 	public Message(Map<String, Object> map)
 	{
-		this.message = (String)map.get("message");
+		this.message = ((String)map.get("message")).replace("&", "§");
 		this.intervalInMinutes = Integer.valueOf(String.valueOf(map.get("intervalInMinutes")));
 	}
 
@@ -30,7 +32,7 @@ public class Message implements ConfigurationSerializable
 	{
 		HashMap<String, Object> map = new HashMap<>();
 
-		map.put("message", message);
+		map.put("message", message.replace("§", "&"));
 		map.put("intervalInMinutes", intervalInMinutes);
 		
 		return map;

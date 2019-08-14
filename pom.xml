@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>Me.EtienneDx</groupId>
 	<artifactId>ReccurentMessages</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<name>ReccurentMessages</name>
 	<description>A spigot plugin for broadcast messages every x minutes</description>
 	<build>

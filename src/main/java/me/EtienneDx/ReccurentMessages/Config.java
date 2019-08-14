@@ -6,6 +6,7 @@ import java.util.List;
 import me.EtienneDx.AnnotationConfig.AnnotationConfig;
 import me.EtienneDx.AnnotationConfig.ConfigField;
 import me.EtienneDx.AnnotationConfig.ConfigFile;
+import net.md_5.bungee.api.ChatColor;
 
 @ConfigFile(header = "Configuration for the Reccurent Messages plugin")
 public class Config extends AnnotationConfig
@@ -14,7 +15,7 @@ public class Config extends AnnotationConfig
     public final String logFilePath = ReccurentMessages.pluginDirPath + "Reccurent_Messages.log";
     
     @ConfigField(name = "Messages", comment = "List of all messages and timings")
-    public List<Message> messages = Arrays.asList(new Message(), new Message("Another message", 10));
+    public List<Message> messages = Arrays.asList(new Message(), new Message(ChatColor.RED + "Another message", 10));
     
     @Override
     public void loadConfig()
